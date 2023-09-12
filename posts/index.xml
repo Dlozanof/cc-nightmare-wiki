@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on Terminal</title>
-    <link>https://example.org/posts/</link>
+    <link>https://dlozanof.github.io/cc-nightmare-wiki/posts/</link>
     <description>Recent content in Posts on Terminal</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="https://example.org/posts/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language><atom:link href="https://dlozanof.github.io/cc-nightmare-wiki/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Design document</title>
-      <link>https://example.org/docs/design_document/</link>
+      <link>https://dlozanof.github.io/cc-nightmare-wiki/docs/design_document/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://example.org/docs/design_document/</guid>
+      <guid>https://dlozanof.github.io/cc-nightmare-wiki/docs/design_document/</guid>
       <description>Executive Manager (reverse-funded) contract Future dystopia in which Corporate wants to get resource from across the galaxy. This is you, an executive junior manager, doing a reverse-funded internship for VA Incorporated TM:
 As many others, you are in charge of extracting all resources of interest from your assigned planet. To do so you will define rewards for tasks that can be accomplished, and the people corporate will migrate there will work on them.</description>
       <content>&lt;h2 id=&#34;executive-manager-reverse-funded-contract&#34;&gt;Executive Manager (reverse-funded) contract&lt;/h2&gt;
 &lt;p&gt;Future dystopia in which Corporate wants to get resource from across the galaxy. This is you, an executive junior manager, doing a reverse-funded internship for VA Incorporated TM:&lt;/p&gt;
 
-&lt;img src=&#34;https://example.org/intro_img.png&#34;  alt=&#34;Hello Friend&#34;  class=&#34;center&#34;  style=&#34;border-radius: 8px;&#34;    /&gt;
+&lt;img src=&#34;../intro_img.png&#34;  alt=&#34;Hello Friend&#34;  class=&#34;center&#34;  style=&#34;border-radius: 8px;&#34;    /&gt;
 
 
 &lt;p&gt;As many others, you are in charge of extracting all resources of interest from your assigned planet. To do so you will define rewards for tasks that can be accomplished, and the people corporate will migrate there will work on them. These rewards are the only way they can keep living there! These so-called Corporate Citizens are born under contract, and their lifespan is directly associated to their productivity.&lt;/p&gt;
@@ -86,7 +86,7 @@ As many others, you are in charge of extracting all resources of interest from y
 &lt;p&gt;We all know we are not alone in the galaxy, but we are much less alone in this planet. There is flora and fauna which does not like to be plundered, so scouting and harvesting are not the only things to do during a mission. Our CC are trained in combat and will face these dangers to the best of their ability. This does not mean success in 100% (nor 20%) of cases, but do not falter. Others will come to take their place soon!&lt;/p&gt;
 
   &lt;figure class=&#34;center&#34; &gt;
-    &lt;img src=&#34;https://example.org/map_view.png&#34;  alt=&#34;Map view&#34;   style=&#34;border-radius: 8px;&#34;  /&gt;
+    &lt;img src=&#34;../map_view.png&#34;  alt=&#34;Map view&#34;   style=&#34;border-radius: 8px;&#34;  /&gt;
     
       &lt;figcaption class=&#34;right&#34;  style=&#34;color: red;&#34; &gt;here you see an overview of the resources and available missions in every sector&lt;/figcaption&gt;
     
@@ -133,7 +133,7 @@ As many others, you are in charge of extracting all resources of interest from y
 &lt;p&gt;On mission success experience is also granted, but related to the mission at hand. In &lt;code&gt;gather&lt;/code&gt; missions the gathering-related skills are the ones that are improved.&lt;/p&gt;
 
   &lt;figure class=&#34;center&#34; &gt;
-    &lt;img src=&#34;https://example.org/mission_view.png&#34;  alt=&#34;Mission view&#34;   style=&#34;border-radius: 8px;&#34;  /&gt;
+    &lt;img src=&#34;../mission_view.png&#34;  alt=&#34;Mission view&#34;   style=&#34;border-radius: 8px;&#34;  /&gt;
     
       &lt;figcaption class=&#34;right&#34;  style=&#34;color: red;&#34; &gt;Here you can see details of all available missions&lt;/figcaption&gt;
     
