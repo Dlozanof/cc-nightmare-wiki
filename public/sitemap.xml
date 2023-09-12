@@ -2,14 +2,14 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://example.org/categories/</loc>
+    <loc>https://dlozanof.github.io/cc-nightmare-wiki/categories/</loc>
   </url><url>
-    <loc>https://example.org/docs/design_document/</loc>
+    <loc>https://dlozanof.github.io/cc-nightmare-wiki/docs/design_document/</loc>
   </url><url>
-    <loc>https://example.org/posts/</loc>
+    <loc>https://dlozanof.github.io/cc-nightmare-wiki/posts/</loc>
   </url><url>
-    <loc>https://example.org/tags/</loc>
+    <loc>https://dlozanof.github.io/cc-nightmare-wiki/tags/</loc>
   </url><url>
-    <loc>https://example.org/</loc>
+    <loc>https://dlozanof.github.io/cc-nightmare-wiki/</loc>
   </url>
 </urlset>
