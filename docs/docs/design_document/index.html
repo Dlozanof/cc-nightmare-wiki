@@ -159,7 +159,12 @@
         <li><a href="#clause-v11332---gather">Clause V.11.3.3.2 - Gather</a></li>
         <li><a href="#clause-v11333---pest-control">Clause V.11.3.3.3 - Pest control</a></li>
         <li><a href="#clause-v11334---investigate">Clause V.11.3.3.4 - Investigate</a></li>
-        <li><a href="#clause-v1134---world-modeling">Clause V.11.3.4 - World modeling</a></li>
+      </ul>
+    </li>
+    <li><a href="#clause-v1134---world-modeling">Clause V.11.3.4 - World modeling</a></li>
+    <li><a href="#clause-v1135---reports">Clause V.11.3.5 - Reports</a>
+      <ul>
+        <li><a href="#clause-v11351---combat-reports">Clause V.11.3.5.1 - Combat Reports</a></li>
       </ul>
     </li>
   </ul>
@@ -532,7 +537,7 @@ Risk rating does not automatically involve actual combat, but represents the bot
 <h4 id="clause-v11335---terminate">Clause V.11.3.3.5 - Terminate<a href="#clause-v11335---terminate" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h4>
 <p><code>pest control</code> is done to remove average hostiles. <code>Terminate</code> is to really remove the source of them, and the risk level is completely off the charts (and so CC&rsquo;s expect the rewards to be).</p>
 <p>Think of them as Bosses. The effect of clearing them out should be different than just a big <code>pest control</code> mission. There can be some smaller ones that are blocking our access to some resources, and big ones that would remove the threat level in the sectors the <code>clan</code> control.</p>
-<h3 id="clause-v1134---world-modeling">Clause V.11.3.4 - World modeling<a href="#clause-v1134---world-modeling" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
+<h2 id="clause-v1134---world-modeling">Clause V.11.3.4 - World modeling<a href="#clause-v1134---world-modeling" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
 <p>In this section I detail how xeno lifeforms behave in their planets. On map generation certain <code>clan</code>s will be generated and part of the map assigned as it&rsquo;s territory.</p>
 <style>
   #callout {
@@ -621,12 +626,14 @@ Skills:
    - Melee: 5
    - Ranged: 10
    - Subterfuge: 6
+   - Perception: 5
 
 Equipment:
    - Light armor: Defense + 1
    - Jetboots: Defense + 1, Escape + 4
    - AK-48: Ranged + 5
-   - Trenchcoat: Cold resistance + 3
+   - Trenchcoat: Cold resistance + 3, Subterfuge + 1
+   - Heat fingerprint detector: Perception + 5
 </code></pre><p><code>Yisus</code> combat rating is <code>10 (ranged) + 5 (AK-48) = 15</code>. On the <code>pest control</code> mission in the sector detailed some lines ago the risk rating is 15, so the ration is <code>15 / 15 = 1.0</code>.</p>
 <style>
   #callout {
@@ -657,6 +664,247 @@ Equipment:
 </div>
 
 <p>This means he&rsquo;s not in favour nor against the idea of taking on this mission (asumming he actually have equipment to go into the glaciar). This is compared agains their neccesities and the rest of missions; possibly undertaking it.</p>
+<h2 id="clause-v1135---reports">Clause V.11.3.5 - Reports<a href="#clause-v1135---reports" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
+<p>There are many kinds of reports while a mission is ongoing, but the most in depth one is the combat report.</p>
+<h3 id="clause-v11351---combat-reports">Clause V.11.3.5.1 - Combat Reports<a href="#clause-v11351---combat-reports" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
+<p>There are several events that trigger a combat, and the results of it will be reported to your desk at some point.</p>
+<style>
+  #callout {
+    background: #32303f;
+    padding: 1.5em 1.25em;
+    border-radius: 3px;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 20px;
+  }
+  #callout-inner {
+    margin-left: 1em;
+  }
+  @media (max-width: 767px) {
+    #callout {
+    padding: 1.5em 0.75em 1.5em 0.6em;
+    }
+    #callout-inner {
+      margin-left: 0.5em;
+    }
+  }
+</style>
+<div id="callout" style="">
+  <div>🔧</div>
+	<div id="callout-inner">
+    Designer though: When to make the reports available? I would say that by the end of the missions so all of them appear together.
+  </div>
+</div>
+
+<p>Before explaining the report itself, the first topic to define is combat itself. It is automatic and every CC and creature will behave in its own interest. The way I see it whenever a combat happens there is a <code>combat field</code> divided in 6 slots:</p>
+<pre tabindex="0"><code>| Team 1                               | Team 2
+| Long range | Mid range | Melee range | Melee range | Mid range | Long range
+</code></pre><p>CC&rsquo;s position depends on preferred weapon equipment. For example a CC with a sniper rifle (and good long range combat stats, I hope) will be on it&rsquo;s own team <code>Long range</code> segment. <code>Yeti</code>s creatures will, on the other hand, prefer to be on the <code>Melee range</code> segment of their team. Actual combat positions however depend on how the combat was initiated. Depending on who has the initiative the positioning will benefit the one which initiated combat.</p>
+<style>
+  #callout {
+    background: #32303f;
+    padding: 1.5em 1.25em;
+    border-radius: 3px;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 20px;
+  }
+  #callout-inner {
+    margin-left: 1em;
+  }
+  @media (max-width: 767px) {
+    #callout {
+    padding: 1.5em 0.75em 1.5em 0.6em;
+    }
+    #callout-inner {
+      margin-left: 0.5em;
+    }
+  }
+</style>
+<div id="callout" style="">
+  <div>🔧</div>
+	<div id="callout-inner">
+    Designer though: It is actually a bit more complicated than that. Every time a combat is randomly decided to happen, there is a check of `perception` vs `subterfuge` on both sides of the combat. If one team detects the other but not the other way around, the first team will have the initiative. Otherwise if both fail or both pass the combat will begin in `nominal` conditions (that is, without benefit for either party).
+  </div>
+</div>
+
+<p><strong>Initiative calculation example</strong></p>
+<p>Let&rsquo;s remember our friend <code>Yisus</code>. Let&rsquo;s say he is a <code>Mid range</code> specialist (because of the AK-48) and that he is hunting for some Yetis. He passes near a group of Yetis (x2), thus initiating a initiative calculation stage:</p>
+<pre tabindex="0"><code>Initiative phase:
+=================
+
+CC detects Yetis?
+  - CC&#39;s perception: 5 (skill) + 5 (heat fingerprint detector) = 10
+  - Yeti subterfuge: 6 (Skill) = 6
+  - Dice are rolled in some TBD way and CC succeeds!!
+Yetis detect CCs?
+  - CC&#39;s subterfuge: 6 (skill) + 1 (trenchcoat) = 7
+  - Yeti perception: 5 (skill) = 5
+  - Dice are rolled in some TBD way and Yeti fails!!
+</code></pre><p>Resulting in the following combat beginning:</p>
+<pre tabindex="0"><code>| Team 1                               | Team 2
+| Long range | Mid range | Melee range | Melee range | Mid range | Long range
+               Yisus                                   Yeti
+</code></pre><p>If both team had succeeded instead:</p>
+<pre tabindex="0"><code>| Team 1                               | Team 2
+| Long range | Mid range | Melee range | Melee range | Mid range | Long range
+               Yisus                     Yeti
+</code></pre><p>And if only the Yeti&rsquo;s suceeded:</p>
+<pre tabindex="0"><code>| Team 1                               | Team 2
+| Long range | Mid range | Melee range | Melee range | Mid range | Long range
+                           Yisus         Yeti
+</code></pre><p>This last one sucks real bad for our CC, since he can only use weapons befitting the combat segment he&rsquo;s in. So a secondary weapon (knife perhaps) would be used with its own Melee stats, which are not great at all.</p>
+<style>
+  #callout {
+    background: #32303f;
+    padding: 1.5em 1.25em;
+    border-radius: 3px;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 20px;
+  }
+  #callout-inner {
+    margin-left: 1em;
+  }
+  @media (max-width: 767px) {
+    #callout {
+    padding: 1.5em 0.75em 1.5em 0.6em;
+    }
+    #callout-inner {
+      margin-left: 0.5em;
+    }
+  }
+</style>
+<div id="callout" style="">
+  <div>🔧</div>
+	<div id="callout-inner">
+    Designer though: Maybe this is too harsh. Potentially destroying the concept of mid/long range except for very particular archetipes or forcing teams instead of individuals for baseline gameplay. Reducing stats in Melee range maybe?
+  </div>
+</div>
+
+<style>
+  #callout {
+    background: #32303f;
+    padding: 1.5em 1.25em;
+    border-radius: 3px;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 20px;
+  }
+  #callout-inner {
+    margin-left: 1em;
+  }
+  @media (max-width: 767px) {
+    #callout {
+    padding: 1.5em 0.75em 1.5em 0.6em;
+    }
+    #callout-inner {
+      margin-left: 0.5em;
+    }
+  }
+</style>
+<div id="callout" style="">
+  <div>🔧</div>
+	<div id="callout-inner">
+    Designer though: Other option is to make ranged weapons much stronger than melee ones, so the creatures power are expected to be quite low by the time Melee comat arrives.
+  </div>
+</div>
+
+<style>
+  #callout {
+    background: #32303f;
+    padding: 1.5em 1.25em;
+    border-radius: 3px;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 20px;
+  }
+  #callout-inner {
+    margin-left: 1em;
+  }
+  @media (max-width: 767px) {
+    #callout {
+    padding: 1.5em 0.75em 1.5em 0.6em;
+    }
+    #callout-inner {
+      margin-left: 0.5em;
+    }
+  }
+</style>
+<div id="callout" style="">
+  <div>🔧</div>
+	<div id="callout-inner">
+    Designer though: A more complicated way to handle this is to have some `tactics` that can be used. For example kiting the creatures. If ranged unit is in melee it tries to disengange and shot with a penalty in damage. OOR maybe that could be the behavior in melee. Try to disengange just enough to get some shots in, and if it fails use Melee attack. This is neat since could mean SKILLS on lvl up (increased disengange possibility, etc)
+  </div>
+</div>
+
+<p><strong>Combat phase</strong></p>
+<p>At this point combat begins, and after several rounds only one victor remains (and some defeated units could potentially have scaped instead).</p>
+<style>
+  #callout {
+    background: #32303f;
+    padding: 1.5em 1.25em;
+    border-radius: 3px;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 20px;
+  }
+  #callout-inner {
+    margin-left: 1em;
+  }
+  @media (max-width: 767px) {
+    #callout {
+    padding: 1.5em 0.75em 1.5em 0.6em;
+    }
+    #callout-inner {
+      margin-left: 0.5em;
+    }
+  }
+</style>
+<div id="callout" style="">
+  <div>✨</div>
+	<div id="callout-inner">
+    Random idea: On the beginning I was thinking that scaping would be a different phase, but instead it could just be a survival check after a unit is defeated. In this sense defeat is not killing but receiving enough damage that the unit deems success impossible and tries to scape.
+  </div>
+</div>
+
+<p>Combat rounds are simple. Every field sector units can only target to enemies in certain sectors of the opposing side:</p>
+<ol>
+<li>Melee can only target melee</li>
+<li>Mid range can target melee and mid range</li>
+<li>Long range can target all</li>
+</ol>
+<p>Targeting itself is a bit more complicated. Every unit has a <code>danger level</code>, and the higher it is the more likely it will be designated as target by all the enemy units that can target it. But other factors are also taken into account (remaining HP for example).</p>
+<style>
+  #callout {
+    background: #32303f;
+    padding: 1.5em 1.25em;
+    border-radius: 3px;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 20px;
+  }
+  #callout-inner {
+    margin-left: 1em;
+  }
+  @media (max-width: 767px) {
+    #callout {
+    padding: 1.5em 0.75em 1.5em 0.6em;
+    }
+    #callout-inner {
+      margin-left: 0.5em;
+    }
+  }
+</style>
+<div id="callout" style="">
+  <div>🔧</div>
+	<div id="callout-inner">
+    Designer though: There would be actually just one `preferred target rating`, given by an equation depending of every monster. Yetis are simple, but other ones could have low HP and low damage, but do area damage so the danger rating should increase with the number of CCs.
+  </div>
+</div>
+
+<p>If no target is available, the unit will move to a possition that will improve the chances to get a target. For example a melee unit that is surprised in <code>Mid range</code> will lose its first turn running to <code>Melee range</code> and the second turn to move the enemies in <code>Mid Range</code> to their own <code>Melee range</code>.</p>
+<p>Everything in a turn happens simultaneously, and is resolved in the sectors that the units began their turn on. A unit that moves from <code>Mid range</code> to <code>Melee range</code> can be killed in the process, so the movement does not happen, but is targeted in <code>Mid range</code>, not <code>Melee range</code>.</p>
 <pre tabindex="0"><code>Ref: https://asciiflow.com/#/share/eJzV2M1q20AQB%2FBXGYRVBIkQlFIan9zSkmMPvRkdVqQ%2BBFwfJBc2hEApPfbQg6F9mD6Nn6QrraSdmZ3dVcih5I9iZJtIv8x%2BKvfZofmyy9aHr%2Fv9ZbZv7nZtts7u60zX2frq1dVlnd2Zs5dvXpuz404fzZs6O59%2Bnk%2Ffnu3xC0zOp7%2FP%2Bqjrw%2Fn0HfxorYVPxYwXMFfbwnbIC5z5iqBszOlGCuZc75ub26Z1GiKTInGG6K2AsRorWsDhxUGYQFHmLzhnK3G0VlNA6Q0MAPwa4yBDpM3GEnHOwOhs0PVmjPnZaAJJcsTTAMhxzr9%2F%2BIezWV3%2FO4pko6GXLcTRfjSdsc42fx3DdST2YrhoPW0OCDTt3c5vrGDpHkHjBbNvpS7vqoYHlE%2FREd2jqmaaVAFQHCihs7EG9cf8gtpFe1vHU1VTpVzRLAqILTaFChjfbd%2FJMO2xjKtCragci1YtyrIEoYDedMpZuixFEo1ijZeev%2FAMluj6hFT2SYOqShK5kZgaepHOhkFlKXkETVUJww%2BPPnzrwG1DX3iccgFH8KDmQn%2B7u%2Bm7t58%2BLPD4nDKtETyk90z3inWUFEeVJReFMKZHxzvz6ElM2XEO9uAAFEXBOcajw5zR8zRO0FO4DJiiIEtdPzfxoY49123Tdfvm8LnDd05wIOjBnDF0uVPgcSZPeBETP8Ucs2qJHF%2FDOUr5E%2BHUnQPr1iKOVCBBU0wrB6zGCPPy7JGW%2FkDNaGMNWcIpoN9%2F53ke49DVQdrzRzikLzBNa0M4%2BZAIJ9JxMDJcHRj3PIBKBC2OcYycPCcecRGNeWZJ4BHJjpB5Q0EZLa9PnlNPYE1fuGYJ24zRAbNJBHmaBCe0TxSrpWl1wBao90CoQFwT54TGufyZ5o01vkzDWObk%2BXKO7Am0oWYDHcBZAu3FNTrBkXamE%2Bf9rtu1RyznnGnSB%2FvG81yYaL84EY5ECjYhmwb50w3zXEzhmgTHM0lzIX3gwQh0Kmpm0ErifLzZNYcgCeO8faywSChSJpA1FrQSOdFID18OJvcdVx1QAYwJrHzO6X%2F%2FS%2FIpx5%2BxFM%2F6qLOH7OEfUSxmQA%3D%3D)
 </code></pre>
       </div></div>
