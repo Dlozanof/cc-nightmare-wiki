@@ -172,6 +172,8 @@
       <ul>
         <li><a href="#melee-attack">Melee attack</a></li>
         <li><a href="#ranged-attack">Ranged attack</a></li>
+        <li><a href="#disengage">Disengage</a></li>
+        <li><a href="#charge">Charge</a></li>
       </ul>
     </li>
     <li><a href="#reports">Reports</a>
@@ -709,6 +711,13 @@ Equipment:
   </div>
 </div>
 
+<p>Combat is divided in several phases:</p>
+<ol>
+<li>Initiative phase</li>
+<li>Combat phase</li>
+<li>Survival phase</li>
+</ol>
+<p>They are explained below in detail, but basically combat starts with an <code>initiative phase</code> that determines the situation in the <code>combat field</code>. Then several <code>combat phase</code> are suceeded in which each creature takes an action, and when there are no more units in one side a <code>survival</code> phase determines is KO&rsquo;ed creatures were able to escape.</p>
 <h3 id="initiative-phase">Initiative phase<a href="#initiative-phase" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
 <p>Let&rsquo;s remember our friend <code>Yisus</code>. Let&rsquo;s say he is a <code>Mid range</code> specialist (because of the AK-48) and that he is hunting for some Yetis. He passes near a group of Yetis (x2), thus initiating a initiative calculation stage:</p>
 <pre tabindex="0"><code>Initiative phase:
@@ -898,9 +907,104 @@ CC does not detect CC
 </ol>
 </blockquote>
 <h2 id="combat-actions">Combat actions<a href="#combat-actions" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
-<p>Building on top of a previous <code>designer though</code> regarding skills&hellip; In every comba</p>
+<p>Building on top of a previous <code>designer though</code> regarding skills&hellip; In every <code>combat phase</code> creatures take one of the many available actions. There are 4 basic ones and more advanced ones depending on the skill level of the CC (and creatures have its own particular ones).</p>
+<style>
+  #callout {
+    background: #32303f;
+    padding: 1.5em 1.25em;
+    border-radius: 3px;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 20px;
+  }
+  #callout-inner {
+    margin-left: 1em;
+  }
+  @media (max-width: 767px) {
+    #callout {
+    padding: 1.5em 0.75em 1.5em 0.6em;
+    }
+    #callout-inner {
+      margin-left: 0.5em;
+    }
+  }
+</style>
+<div id="callout" style="">
+  <div>🔧</div>
+	<div id="callout-inner">
+    Designer though: I was thinking about having levels, and skills for CC of level 3 for example. But maybe is more interesting that having Subterfuge &gt;= 10 &amp;&amp; Ranged combat &gt;= 10 unlocks `Sniper shot`, a special attack that does x3 damage and has 2 rounds of cooldown
+  </div>
+</div>
+
 <h3 id="melee-attack">Melee attack<a href="#melee-attack" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
+<p>Requires attacker and defender to be in <code>Melee range</code> section of the combat field. Attacker uses <code>Melee attack</code> skill and defender <code>Melee defense</code> skill. Damage is given by attacker&rsquo;s <code>Strength</code> and any bonus the weapong provides. Armor might provide damage reduction.</p>
 <h3 id="ranged-attack">Ranged attack<a href="#ranged-attack" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
+<p>Exactly the same as melee attack, but using <code>Long/Mid range</code> skill vs <code>Range defense</code> skill.</p>
+<style>
+  #callout {
+    background: #32303f;
+    padding: 1.5em 1.25em;
+    border-radius: 3px;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 20px;
+  }
+  #callout-inner {
+    margin-left: 1em;
+  }
+  @media (max-width: 767px) {
+    #callout {
+    padding: 1.5em 0.75em 1.5em 0.6em;
+    }
+    #callout-inner {
+      margin-left: 0.5em;
+    }
+  }
+</style>
+<div id="callout" style="">
+  <div>🔧</div>
+	<div id="callout-inner">
+    Designer though: Not sure if I should create a Long range defense and mid range defense skills. Does not seem to have a lot of sense to me, to be honest.
+  </div>
+</div>
+
+<h3 id="disengage">Disengage<a href="#disengage" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
+<p>This skill is used by ranged creatures when they are in melee combat situation. I need to decide between two options:</p>
+<ol>
+<li>Always succeeds, so they receive a free melee attack but they move back, and the next turn they have a free ranged attack while the hostiles move towards them again. In a cycle.</li>
+<li>Is actually a melee attack of sorts, does not do a lot of damage but if successful CC is moved back one sector.</li>
+<li>Remove it alltogether, every CC is mostly melee but has additional benefit of ranged weapons during initial phases. I do not like this one too much.</li>
+</ol>
+<style>
+  #callout {
+    background: #32303f;
+    padding: 1.5em 1.25em;
+    border-radius: 3px;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 20px;
+  }
+  #callout-inner {
+    margin-left: 1em;
+  }
+  @media (max-width: 767px) {
+    #callout {
+    padding: 1.5em 0.75em 1.5em 0.6em;
+    }
+    #callout-inner {
+      margin-left: 0.5em;
+    }
+  }
+</style>
+<div id="callout" style="">
+  <div>🔧</div>
+	<div id="callout-inner">
+    Designer though: Maybe removing the `mid range` sector would be an improvement, so that snipers can disengage to their allocated sector. Melee enemies do not receive two attacks on the beginning (they will from a skill maybe), but in exchange snipers can attack once every two rounds after melee starts.
+  </div>
+</div>
+
+<h3 id="charge">Charge<a href="#charge" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
+<p>Designed for melee units. The unit moves forward one space. If it cannot move forward it will &ldquo;move&rdquo; the enemy field forward. This is a bit weird because it means the friendly units in far slots will be &ldquo;teleported&rdquo; forward. This is a design decision to take. I would need to try and see if I like it.</p>
 <h2 id="reports">Reports<a href="#reports" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
 <p>There are many kinds of reports while a mission is ongoing, but the most in depth one is the combat report.</p>
 <h3 id="combat-reports">Combat reports<a href="#combat-reports" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>

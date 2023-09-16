@@ -538,6 +538,13 @@ Equipment:
   &lt;/div&gt;
 &lt;/div&gt;
 
+&lt;p&gt;Combat is divided in several phases:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Initiative phase&lt;/li&gt;
+&lt;li&gt;Combat phase&lt;/li&gt;
+&lt;li&gt;Survival phase&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;They are explained below in detail, but basically combat starts with an &lt;code&gt;initiative phase&lt;/code&gt; that determines the situation in the &lt;code&gt;combat field&lt;/code&gt;. Then several &lt;code&gt;combat phase&lt;/code&gt; are suceeded in which each creature takes an action, and when there are no more units in one side a &lt;code&gt;survival&lt;/code&gt; phase determines is KO&amp;rsquo;ed creatures were able to escape.&lt;/p&gt;
 &lt;h3 id=&#34;initiative-phase&#34;&gt;Initiative phase&lt;/h3&gt;
 &lt;p&gt;Let&amp;rsquo;s remember our friend &lt;code&gt;Yisus&lt;/code&gt;. Let&amp;rsquo;s say he is a &lt;code&gt;Mid range&lt;/code&gt; specialist (because of the AK-48) and that he is hunting for some Yetis. He passes near a group of Yetis (x2), thus initiating a initiative calculation stage:&lt;/p&gt;
 &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;Initiative phase:
@@ -727,9 +734,104 @@ CC does not detect CC
 &lt;/ol&gt;
 &lt;/blockquote&gt;
 &lt;h2 id=&#34;combat-actions&#34;&gt;Combat actions&lt;/h2&gt;
-&lt;p&gt;Building on top of a previous &lt;code&gt;designer though&lt;/code&gt; regarding skills&amp;hellip; In every comba&lt;/p&gt;
+&lt;p&gt;Building on top of a previous &lt;code&gt;designer though&lt;/code&gt; regarding skills&amp;hellip; In every &lt;code&gt;combat phase&lt;/code&gt; creatures take one of the many available actions. There are 4 basic ones and more advanced ones depending on the skill level of the CC (and creatures have its own particular ones).&lt;/p&gt;
+&lt;style&gt;
+  #callout {
+    background: #32303f;
+    padding: 1.5em 1.25em;
+    border-radius: 3px;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 20px;
+  }
+  #callout-inner {
+    margin-left: 1em;
+  }
+  @media (max-width: 767px) {
+    #callout {
+    padding: 1.5em 0.75em 1.5em 0.6em;
+    }
+    #callout-inner {
+      margin-left: 0.5em;
+    }
+  }
+&lt;/style&gt;
+&lt;div id=&#34;callout&#34; style=&#34;&#34;&gt;
+  &lt;div&gt;🔧&lt;/div&gt;
+	&lt;div id=&#34;callout-inner&#34;&gt;
+    Designer though: I was thinking about having levels, and skills for CC of level 3 for example. But maybe is more interesting that having Subterfuge &amp;gt;= 10 &amp;amp;&amp;amp; Ranged combat &amp;gt;= 10 unlocks `Sniper shot`, a special attack that does x3 damage and has 2 rounds of cooldown
+  &lt;/div&gt;
+&lt;/div&gt;
+
 &lt;h3 id=&#34;melee-attack&#34;&gt;Melee attack&lt;/h3&gt;
+&lt;p&gt;Requires attacker and defender to be in &lt;code&gt;Melee range&lt;/code&gt; section of the combat field. Attacker uses &lt;code&gt;Melee attack&lt;/code&gt; skill and defender &lt;code&gt;Melee defense&lt;/code&gt; skill. Damage is given by attacker&amp;rsquo;s &lt;code&gt;Strength&lt;/code&gt; and any bonus the weapong provides. Armor might provide damage reduction.&lt;/p&gt;
 &lt;h3 id=&#34;ranged-attack&#34;&gt;Ranged attack&lt;/h3&gt;
+&lt;p&gt;Exactly the same as melee attack, but using &lt;code&gt;Long/Mid range&lt;/code&gt; skill vs &lt;code&gt;Range defense&lt;/code&gt; skill.&lt;/p&gt;
+&lt;style&gt;
+  #callout {
+    background: #32303f;
+    padding: 1.5em 1.25em;
+    border-radius: 3px;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 20px;
+  }
+  #callout-inner {
+    margin-left: 1em;
+  }
+  @media (max-width: 767px) {
+    #callout {
+    padding: 1.5em 0.75em 1.5em 0.6em;
+    }
+    #callout-inner {
+      margin-left: 0.5em;
+    }
+  }
+&lt;/style&gt;
+&lt;div id=&#34;callout&#34; style=&#34;&#34;&gt;
+  &lt;div&gt;🔧&lt;/div&gt;
+	&lt;div id=&#34;callout-inner&#34;&gt;
+    Designer though: Not sure if I should create a Long range defense and mid range defense skills. Does not seem to have a lot of sense to me, to be honest.
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&#34;disengage&#34;&gt;Disengage&lt;/h3&gt;
+&lt;p&gt;This skill is used by ranged creatures when they are in melee combat situation. I need to decide between two options:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Always succeeds, so they receive a free melee attack but they move back, and the next turn they have a free ranged attack while the hostiles move towards them again. In a cycle.&lt;/li&gt;
+&lt;li&gt;Is actually a melee attack of sorts, does not do a lot of damage but if successful CC is moved back one sector.&lt;/li&gt;
+&lt;li&gt;Remove it alltogether, every CC is mostly melee but has additional benefit of ranged weapons during initial phases. I do not like this one too much.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;style&gt;
+  #callout {
+    background: #32303f;
+    padding: 1.5em 1.25em;
+    border-radius: 3px;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 20px;
+  }
+  #callout-inner {
+    margin-left: 1em;
+  }
+  @media (max-width: 767px) {
+    #callout {
+    padding: 1.5em 0.75em 1.5em 0.6em;
+    }
+    #callout-inner {
+      margin-left: 0.5em;
+    }
+  }
+&lt;/style&gt;
+&lt;div id=&#34;callout&#34; style=&#34;&#34;&gt;
+  &lt;div&gt;🔧&lt;/div&gt;
+	&lt;div id=&#34;callout-inner&#34;&gt;
+    Designer though: Maybe removing the `mid range` sector would be an improvement, so that snipers can disengage to their allocated sector. Melee enemies do not receive two attacks on the beginning (they will from a skill maybe), but in exchange snipers can attack once every two rounds after melee starts.
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&#34;charge&#34;&gt;Charge&lt;/h3&gt;
+&lt;p&gt;Designed for melee units. The unit moves forward one space. If it cannot move forward it will &amp;ldquo;move&amp;rdquo; the enemy field forward. This is a bit weird because it means the friendly units in far slots will be &amp;ldquo;teleported&amp;rdquo; forward. This is a design decision to take. I would need to try and see if I like it.&lt;/p&gt;
 &lt;h2 id=&#34;reports&#34;&gt;Reports&lt;/h2&gt;
 &lt;p&gt;There are many kinds of reports while a mission is ongoing, but the most in depth one is the combat report.&lt;/p&gt;
 &lt;h3 id=&#34;combat-reports&#34;&gt;Combat reports&lt;/h3&gt;
