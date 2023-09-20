@@ -888,6 +888,104 @@ CC does not detect CC
   &lt;/div&gt;
 &lt;/div&gt;
 
+&lt;h2 id=&#34;corporate-citizens&#34;&gt;Corporate Citizens&lt;/h2&gt;
+&lt;p&gt;These are your workers, Corporate sends them to your base from time to time with promises of wealth and safety. It is not a lie if there is no signed document with a clause indicating the opposite. They will go to the living quarters with a bit of money and start expending it on life expenses. After some months if you do your work properly the CCs that arrive to the base will be better equipped since the easiest missions will be impossible to takle by starting out CCs.&lt;/p&gt;
+&lt;p&gt;After some time they will be low on money and will try to tackle certain missions. They all start with some standard equipment but is quite bad, so their first investment will most probably be weapons and armor. Equipment later.&lt;/p&gt;
+&lt;h3 id=&#34;stats&#34;&gt;Stats&lt;/h3&gt;
+&lt;p&gt;Every CC have a set of stats, these are&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Speed: used for movement in combat&lt;/li&gt;
+&lt;li&gt;Melee attack&lt;/li&gt;
+&lt;li&gt;Ranged attack&lt;/li&gt;
+&lt;li&gt;Melee defense&lt;/li&gt;
+&lt;li&gt;Ranged defense&lt;/li&gt;
+&lt;li&gt;Perception: used to detect hostiles&lt;/li&gt;
+&lt;li&gt;Subterfuge: used to avoid detection by hostiles&lt;/li&gt;
+&lt;li&gt;Health&lt;/li&gt;
+&lt;li&gt;Survival: Defines the chance of surviving a lost encounter with hostiles. Represents ability to disengage/outrun them.&lt;/li&gt;
+&lt;li&gt;Gathering: for gathering missions&lt;/li&gt;
+&lt;li&gt;Insight: for investigation missions&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;There are also virtual stats, in the sense they are provided only by the equipment bonuses. CCs have an intrinsic value of 0 for these:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Damage&lt;/li&gt;
+&lt;li&gt;Damage reduction&lt;/li&gt;
+&lt;/ol&gt;
+&lt;style&gt;
+  #callout {
+    background: #32303f;
+    padding: 1.5em 1.25em;
+    border-radius: 3px;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 20px;
+  }
+  #callout-inner {
+    margin-left: 1em;
+  }
+  @media (max-width: 767px) {
+    #callout {
+    padding: 1.5em 0.75em 1.5em 0.6em;
+    }
+    #callout-inner {
+      margin-left: 0.5em;
+    }
+  }
+&lt;/style&gt;
+&lt;div id=&#34;callout&#34; style=&#34;&#34;&gt;
+  &lt;div&gt;🔧&lt;/div&gt;
+	&lt;div id=&#34;callout-inner&#34;&gt;
+    Designer though: I talked about strength before, but I think is not a very interesting to have, so I remove it here.
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Combat skills only matter for hitting/avoiding, damage is calculated depending on the damage rating of the weapon and the damage reduction from the armor.&lt;/p&gt;
+&lt;h2 id=&#34;life-cycle&#34;&gt;Life cycle&lt;/h2&gt;
+&lt;p&gt;CCs will arrive from time to time to the base wich 100 credits to expend. They need to pay a daily amount for living quarters rent and food, and depending on the remaining money they will be more or less motivated to take risks on missions.&lt;/p&gt;
+&lt;p&gt;The decisions regarding expenditure are simple. After a mission the CC will allocate enough money for 3 days of rent, and the remaining will be used on improving equipment. They will always buy the cheapest one from the current tier and will not buy anything from a higher tier until they complete the current set.&lt;/p&gt;
+&lt;style&gt;
+  #callout {
+    background: #32303f;
+    padding: 1.5em 1.25em;
+    border-radius: 3px;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 20px;
+  }
+  #callout-inner {
+    margin-left: 1em;
+  }
+  @media (max-width: 767px) {
+    #callout {
+    padding: 1.5em 0.75em 1.5em 0.6em;
+    }
+    #callout-inner {
+      margin-left: 0.5em;
+    }
+  }
+&lt;/style&gt;
+&lt;div id=&#34;callout&#34; style=&#34;&#34;&gt;
+  &lt;div&gt;🔧&lt;/div&gt;
+	&lt;div id=&#34;callout-inner&#34;&gt;
+    Designer though: This can get as complicated as I want, but for now I prefer to KISS
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&#34;market-1&#34;&gt;Market&lt;/h2&gt;
+&lt;p&gt;There is a dynamic intergalactic market, which by no means indicates a randomly changing set of values for each of the resources that can be sold. &lt;code&gt;gather&lt;/code&gt; missions will yield resources that can be sold here, and the money can be used in some ways.&lt;/p&gt;
+&lt;h3 id=&#34;debt-repayment&#34;&gt;Debt repayment&lt;/h3&gt;
+&lt;p&gt;The point of this whole operation is that you generate profit, so it is your responsibility to pay certain amounts of credits at the end of each week/month to comply wiht Corporate objectives. Use the money you get by selling resources to repay it or you will lose &lt;code&gt;your life&lt;/code&gt; the game.&lt;/p&gt;
+&lt;h3 id=&#34;base-improvements&#34;&gt;Base improvements&lt;/h3&gt;
+&lt;p&gt;There are several other things to do with money, mostly dedicated to improve the base. This has several branches&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Improve equipment tier that can be bought by CCs&lt;/li&gt;
+&lt;li&gt;Improve skills from incoming CCs&lt;/li&gt;
+&lt;li&gt;Others. Things like having &lt;code&gt;teleport&lt;/code&gt; or &lt;code&gt;car&lt;/code&gt;s to go to missions diminishing the time needed to arrive.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;psychologist&#34;&gt;Psychologist&lt;/h2&gt;
+&lt;p&gt;This section is where you can see how each of the CCs are faring individually. There is a list and it displays how content they are, how much money do they have, if they have unmet needs, etc. Not really a debug view but something that allows to see how the population are generally faring.&lt;/p&gt;
+&lt;h2 id=&#34;game-engine&#34;&gt;Game engine&lt;/h2&gt;
+&lt;p&gt;There are many topics to cover here. But I hope to be able to use &lt;code&gt;Beaver&lt;/code&gt; as an engine plus some 2D drawing library (not yet decided) as a graphical backend. Probably making a tool to generate/load/tag map files would be nice. It could potentially be used to generate a pack that contains the big image and the tags for each quadrant.&lt;/p&gt;
 &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;Ref: https://asciiflow.com/#/share/eJzV2M1q20AQB%2FBXGYRVBIkQlFIan9zSkmMPvRkdVqQ%2BBFwfJBc2hEApPfbQg6F9mD6Nn6QrraSdmZ3dVcih5I9iZJtIv8x%2BKvfZofmyy9aHr%2Fv9ZbZv7nZtts7u60zX2frq1dVlnd2Zs5dvXpuz404fzZs6O59%2Bnk%2Ffnu3xC0zOp7%2FP%2Bqjrw%2Fn0HfxorYVPxYwXMFfbwnbIC5z5iqBszOlGCuZc75ub26Z1GiKTInGG6K2AsRorWsDhxUGYQFHmLzhnK3G0VlNA6Q0MAPwa4yBDpM3GEnHOwOhs0PVmjPnZaAJJcsTTAMhxzr9%2F%2BIezWV3%2FO4pko6GXLcTRfjSdsc42fx3DdST2YrhoPW0OCDTt3c5vrGDpHkHjBbNvpS7vqoYHlE%2FREd2jqmaaVAFQHCihs7EG9cf8gtpFe1vHU1VTpVzRLAqILTaFChjfbd%2FJMO2xjKtCragci1YtyrIEoYDedMpZuixFEo1ijZeev%2FAMluj6hFT2SYOqShK5kZgaepHOhkFlKXkETVUJww%2BPPnzrwG1DX3iccgFH8KDmQn%2B7u%2Bm7t58%2BLPD4nDKtETyk90z3inWUFEeVJReFMKZHxzvz6ElM2XEO9uAAFEXBOcajw5zR8zRO0FO4DJiiIEtdPzfxoY49123Tdfvm8LnDd05wIOjBnDF0uVPgcSZPeBETP8Ucs2qJHF%2FDOUr5E%2BHUnQPr1iKOVCBBU0wrB6zGCPPy7JGW%2FkDNaGMNWcIpoN9%2F53ke49DVQdrzRzikLzBNa0M4%2BZAIJ9JxMDJcHRj3PIBKBC2OcYycPCcecRGNeWZJ4BHJjpB5Q0EZLa9PnlNPYE1fuGYJ24zRAbNJBHmaBCe0TxSrpWl1wBao90CoQFwT54TGufyZ5o01vkzDWObk%2BXKO7Am0oWYDHcBZAu3FNTrBkXamE%2Bf9rtu1RyznnGnSB%2FvG81yYaL84EY5ECjYhmwb50w3zXEzhmgTHM0lzIX3gwQh0Kmpm0ErifLzZNYcgCeO8faywSChSJpA1FrQSOdFID18OJvcdVx1QAYwJrHzO6X%2F%2FS%2FIpx5%2BxFM%2F6qLOH7OEfUSxmQA%3D%3D)
 &lt;/code&gt;&lt;/pre&gt;</content>
     </item>
